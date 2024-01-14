@@ -1,0 +1,9 @@
+<app-person
+  [title]="pageTitle"
+  [addButtonLabel]="buttonLabel"
+  [persons]="(professors$ | async) || []"
+  [isLoading]="!!(isLoading$ | async)"
+  (onAdd)="newProfessor()"
+  (onEdit)="editProfessor($event)"
+  (onDelete)="deleteProfessor($event)"
+></app-person>
